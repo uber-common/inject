@@ -36,7 +36,7 @@ type Injector interface {
     // 将会继续从它的父injector中找，直到返回error.
     SetParent(Injector)
     // SetOptions提供一个接口用于设置injector.
-	SetOptions(InjectorOptions)
+    SetOptions(InjectorOptions)
 }
 ```
 
