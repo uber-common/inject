@@ -176,7 +176,7 @@ func TestInjectImplementors_AmbiguousImplementation(t *testing.T) {
 func TestInjectImplementors_AmbiguousImplementationPanic(t *testing.T) {
 	defer func() {
 		r := recover()
-		expect(t, r, "Expected single matching implementation for type fmt.Stringer but found 2: [<*inject.Greeter Value> <*inject.Greeter2 Value>]")
+		expect(t, r, "Expected single matching implementation for type <fmt.Stringer> but found 2: [<*inject.Greeter Value> <*inject.Greeter2 Value>]")
 	}()
 
 	injector := New()
